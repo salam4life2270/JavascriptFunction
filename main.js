@@ -51,8 +51,15 @@ const add = (contact)=>{
     contacts.push(contact);
     console.log("was added");
 }
-add({email:"jane@gmail.com",name:"jane"});
+add({email:"jane@gmail.com",name:"jane"}); // add is a function
 console.log("after add")
+
+
+
+
+
+
+
 
 /* Removing email from the contact list */
 
@@ -70,5 +77,69 @@ const remove = (email) =>{
     }
 
 }
-remove({email:"jane@gmail.com"});
+remove({email:"jane@gmail.com"}); // remove is a function
 console.log("after remove")
+
+
+
+
+
+/* Editing name and email for Frasco*/
+
+const edit = (email,newData) => {
+    for (let i=0;i<contacts.lenght;i++) {
+    if (email === contacts[i].email) {
+        contacts = newData;
+        console.log("was updated")
+        return;
+    }
+        else {
+        console.log("not updated")
+    }
+}
+}
+edit ("frasco2gmail.com",{email:"Doe@gmail.com",name:"Doe"}); // edit is a function
+
+
+
+
+
+
+
+/* get( email ) - Output information for the corresponding contact */
+const get = (email) => {
+    for (let i=0;i<contacts.lenght;i++) {
+        if (email === contacts[i].email) {
+            console.log(contacts[i].name)
+            console.log(contacts[i].email)
+            return;
+        }
+    }
+    console.log ("contact not found")
+    
+}
+get ("onstanta@gmail.com") // get is a function
+    console.log(contacts)
+
+
+
+
+
+
+/* List all contacts available in the contact list*/
+const list = (names) =>{
+    names.forEach(name => console.log(name));
+}
+list (contacts) // list is a function
+
+
+
+
+
+/*clear() - Remove all contacts from the list*/
+
+const clear = () =>{
+    contacts = []
+    console.log ("The contact list was cleared")
+}
+clear () // Clear is a function
