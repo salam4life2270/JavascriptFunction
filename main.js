@@ -68,7 +68,7 @@ const remove = (email) =>{
     for(let i=0;i<contacts.length;i++) {
         if(email.email == contacts[i].email) {
             console.log("remove email");
-            contacts.splice(i, 1);
+            contacts.splice(i, 1); // Splice was used to remove the contact email
             return;
         }
         else{
